@@ -35,29 +35,29 @@
 # Спіймайте будь-яку ValueError і згенеруйте замість нього FormulaError
 # c. Якщо другий елемент не є «+» або «-», киньте ексепшн FormulaError
 
-class FormulaError(Exception):
-    pass
-
-
-try:
-    formula = input("Enter formula in the provided format: \"number1\" \"operator + or -\" \"number2\". "
-                    "Example: 1 + 1): ")
-    arguments = formula.split()
-    if len(arguments) != 3:
-        raise FormulaError("Invalid formula. "
-                           "Please enter a formula in the format: \"number1\" \"operator\" \"number2\". "
-                           "Example: 1 + 1)")
-    try:
-        num1 = float(arguments[0])
-        num2 = float(arguments[2])
-    except ValueError:
-        raise FormulaError("Invalid number. Please enter only numeric values for the numbers in the formula")
-    if arguments[1] not in ['+', '-']:
-        raise FormulaError("Invalid operator. Please enter either '+' or '-' as the operator")
-    if arguments[1] == '+':
-        result = num1 + num2
-    else:
-        result = num1 - num2
-    print(f"Result: {result}")
-except FormulaError as e:
-    print(f"Formula Error: {e}")
+# class FormulaError(Exception):
+#     pass
+#
+#
+# try:
+#     formula = input("Enter formula in the provided format: \"number1\" \"operator + or -\" \"number2\". "
+#                     "Example: 1 + 1): ")
+#     arguments = formula.split()
+#     if len(arguments) != 3:
+#         raise FormulaError("Invalid formula. "
+#                            "Please enter a formula in the format: \"number1\" \"operator\" \"number2\". "
+#                            "Example: 1 + 1)")
+#     try:
+#         num1 = float(arguments[0])
+#         num2 = float(arguments[2])
+#     except ValueError:
+#         raise FormulaError("Invalid number. Please enter only numeric values for the numbers in the formula")
+#     if arguments[1] not in ['+', '-']:
+#         raise FormulaError("Invalid operator. Please enter either '+' or '-' as the operator")
+#     if arguments[1] == '+':
+#         result = num1 + num2
+#     else:
+#         result = num1 - num2
+#     print(f"Result: {result}")
+# except FormulaError as e:
+#     print(f"Formula Error: {e}")
