@@ -1,12 +1,15 @@
-from homework_6 import check_power_of_two, square, is_prime, change_list, to_dict, sum_range
+from task_1_check_power_of_two import check_power_of_two
+from task_2_square import square
+from task_3_is_prime import is_prime
+from task_4_change_list import change_list
+from task_5_to_dict import to_dict
+from task_6_sum_range import sum_range
+
 
 if __name__ == '__main__':
-    natural_number_to_check = int(input("Enter a natural number: "))
-    check_power_of_two(natural_number_to_check)
+    check_power_of_two(3)
 
-    side_of_a_square_to_check = int(input("Enter a natural number for the length of the side of a square: "))
-    square_details = square(side_of_a_square_to_check)
-    print(f'Square\'s area, perimeter and diagonal are: {square_details}')
+    print(square(22))
 
     print(is_prime(999.9))
 
@@ -15,4 +18,3 @@ if __name__ == '__main__':
     print(to_dict(["test", "Olena", "new_dict", True, 5, 6]))
 
     print(sum_range(1, 3))
-
