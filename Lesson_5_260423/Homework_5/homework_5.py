@@ -2,8 +2,11 @@
 # Створити реалізацію квадратного рівняння a•x²+b•x+c=0(користувач вводить a, b, c),
 # якщо дискримінант від'ємний викликати виняток DiscriminantError і вивести відповідне повідомлення.
 
-# class DiscriminantError(Exception):
-#     pass
+class DiscriminantError(Exception, FileExistsError):
+    pass
+
+
+print(dir(DiscriminantError))
 #
 #
 # a = float(input("Enter a: "))
