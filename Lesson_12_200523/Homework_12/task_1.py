@@ -20,7 +20,7 @@ def solve_quadratic_equation(a, b, c):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Розрахунок квадратного рівняння')
+    parser = argparse.ArgumentParser(description='Calculation of the quadratic equation')
     parser.add_argument('-a', type=float, default=0, help='This should be a parameter "a" for the quadratic equation')
     parser.add_argument('-b', type=float, required=True,
                         help='This should be a parameter "b" for the quadratic equation')
