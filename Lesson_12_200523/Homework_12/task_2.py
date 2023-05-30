@@ -76,7 +76,6 @@ def main():
             print('  Homeworld URL:', pilot['homeworld']['url'])
             print()
 
-        # Записати інформацію у JSON-файл
             with open('millennium_falcon_info.json', 'w') as file:
                 json.dump(millennium_falcon_info, file)
             print('Millennium Falcon information saved to millennium_falcon_info.json')
